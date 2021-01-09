@@ -1,0 +1,109 @@
+1) make directory
+
+2) if you have'nt installed yarn then install it by using following command:
+npm install -g yarn
+
+it works similar to npm but it is faster.
+yarn -v for version check
+
+3) If you are using yarn then =>
+go to folder type -> yarn init
+ 
+enter required data
+If you want to go with default-> yarn init -yes 
+
+It will generate package.json file.
+
+If you are using npm then -> npm init
+
+4) create a folder "public"
+
+in that folder create css, js, img folder 
+
+in css folder create app.css file.
+in js folder create app.js file.
+
+we are creating this files because after we use bundeller to support latest Javascript version browsers.
+
+5) create app folder in root directory.
+In this folder we have our backend.
+
+in this folder create http folder.
+     for request related, controllers, middlewares files.
+     in this folder create controllers and middleware folders.
+
+in app folder create models folder.
+    for our models.
+
+in app folder create config folder.
+    for config. of authentication.
+
+==> we are using MVC pattern.
+
+****************** Here our app folder is ready *****************************
+
+6) create resources folder in root directory.
+    for our views(templates)
+    this files are uncompiled. after completion we compile these files in public folder.
+
+    create following:
+    ->resources
+        ->js
+            app.js
+        ->scss
+            app.scss
+        ->views
+
+******************** resources folder is ready ******************************
+
+7) create routes folder in root directory.
+    in that -> create web.js
+        for web related routes.
+    in that -> create api.js
+        If we create api then for api related routes.
+
+******************* routes folder is ready and for our project basic skeleten is ready ***********************
+
+******************* Now create Express server ************************************
+
+8) We need to install Express
+so, run following command -> yarn add express ejs express-ejs-layouts
+
+if you are using npm then npm install express......
+
+yarn is faster then npm so .....
+
+9) install dev dependecy 
+
+    -nodemon (for development)
+    command: -> yarn add nodemon -D
+             -> npm add ...
+    when we go for production then we don't need nodemon
+
+10) create server.js file in root folder.
+    for creating server
+    -> server.js
+    const express = require('express')
+    const app = express()
+    const PORT = process.env.PORT || 3000
+
+    app.listen(PORT, () => {
+    console.log(`Listening on port 3000 ${PORT}`)
+    } )
+
+    -by typing above file server is created.
+
+11) now when we make changes in file then it is not reflected directly.
+    so we need to tell nodemon to run continuously.
+    so go to package.json file and add scripts.
+
+    "scripts": {
+    "serve" : "node server.js",
+    "dev" : "nodemon server.js"
+    },
+
+    now we are running in development so write command to run server.
+    -> npm run dev
+        or
+    -> yarn dev
+    so when you change the file then it will restart the server.

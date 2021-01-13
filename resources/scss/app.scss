@@ -1,0 +1,70 @@
+@import './variables';
+
+body{
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: $dark;
+}
+
+nav li:last-child a{
+    background: $primary;
+    &:hover{
+        background: $primary-hover;
+    }
+    &:after{
+        background: $primary-hover;
+        display: none;
+    }
+}
+
+nav li a{
+    transition: $smooth;
+    font-weight: 900;
+    font-size: 20px;
+    &:hover{
+        color: $temp;
+    }
+}
+
+nav ul li a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    // margin-top: 10px;
+    height: 2px;
+    // left: 50%;
+    // position: absolute;
+    background: $temp;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+nav ul li a:hover:after { 
+    width: 100%; 
+    left: 23%; 
+}
+  @media screen and (max-height: 300px) {
+      ul {
+          margin-top: 40px;
+      }
+  }
+  
+
+section.hero{
+    background: $secondary;
+}
+
+.size{
+    background: $secondary;
+}
+
+.add-to-cart{
+    border: 2px solid $primary;
+    color:$primary;
+    transition: $smooth;
+    &:hover{
+        background:$primary;
+        border-color: $pure;
+        color:$pure;
+    }
+}

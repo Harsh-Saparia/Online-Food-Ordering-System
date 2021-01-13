@@ -107,3 +107,27 @@ yarn is faster then npm so .....
         or
     -> yarn dev
     so when you change the file then it will restart the server.
+
+12) Git setup and first commit
+
+13) install laravel Mix
+    yarn add laravel-mix --save-dev
+    npm install laravel-mix --save-dev
+
+    yarn add cross-env --save-dev
+
+    add following in package.json file in scripts :
+    "devlopment":        "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js --progress --hide-modules",
+    "watch":      "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js --watch --progress --hide-modules",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js --no-progress --hide-modules"
+
+14) for older version -> npm run watch
+    for older version -> yarn watch
+
+    for newer version -> npx mix
+
+15) now here i am using tailwind.css
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    
+16)

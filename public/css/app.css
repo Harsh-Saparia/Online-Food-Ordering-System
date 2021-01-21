@@ -56,10 +56,39 @@ section.hero {
 .add-to-cart {
   border: 2px solid #FE5F1E;
   color: #FE5F1E;
-  transition: all 0.3s ease-in-out;
+  border-radius: 50px;
+  box-shadow: inset -2px -2px 8px white, inset -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease-in-out;
 }
 .add-to-cart:hover {
   background: #FE5F1E;
-  border-color: #fff;
+  box-shadow: -2px -2px 8px #ececec, -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
   color: #fff;
+}
+
+.temp {
+  background: #f0f0f0;
+}
+
+.single-product {
+  box-shadow: inset -2px -2px 8px white, inset -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+}
+.single-product:hover {
+  box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+  background: #FE5F1E;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background: #b23301;
+}
+
+section.cart {
+  background: #F8F8F8;
+}
+section.cart .amount {
+  color: #FE5F1E;
 }

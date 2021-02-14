@@ -1,0 +1,65 @@
+[{
+  "_id": {
+    "$oid": "5eee651f739f8c674fd736ee"
+  },
+  "name": "Aloo tikki",
+  "image": "5-2-burger-png.png",
+  "price": "250",
+  "category":"fast food"
+},{
+  "_id": {
+    "$oid": "5eee6671a27a66807cf2bea3"
+  },
+  "name": "Paneer tikka",
+  "image": "5-2-burger-png.png",
+  "price": "300",
+  "category":"punjabi"
+},{
+  "_id": {
+    "$oid": "5eee6692a27a66807cf2bea4"
+  },
+  "name": "Butter Nan",
+  "image": "5-2-burger-png.png",
+  "price": "200",
+  "category":"roti"
+},{
+  "_id": {
+    "$oid": "5eee66a5a27a66807cf2bea5"
+  },
+  "name": "Manchurian",
+  "image": "5-2-burger-png.png",
+  "price": "500",
+  "category":"Chinese"
+},{
+  "_id": {
+    "$oid": "5eee66c4a27a66807cf2bea6"
+  },
+  "name": "Handi biryani",
+  "image": "5-2-burger-png.png",
+  "price": "350",
+  "category":"rise"
+},{
+  "_id": {
+    "$oid": "5eee66cfa27a66807cf2bea7"
+  },
+  "name": "Panner chilli",
+  "image": "5-2-burger-png.png",
+  "price": "200",
+  "category":"starter"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2bea8"
+  },
+  "name": "Pau bhaji",
+  "image": "5-2-burger-png.png",
+  "price": "600",
+  "category":"desi"
+},{
+  "_id": {
+    "$oid": "5eee6717a27a66807cf2bea9"
+  },
+  "name": "Fix Gujarati thali",
+  "image": "5-2-burger-png.png",
+  "price": "500",
+  "category":"gujarati"
+}]

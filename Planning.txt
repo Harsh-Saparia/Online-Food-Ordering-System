@@ -130,4 +130,31 @@ yarn is faster then npm so .....
 
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     
-16)
+16)Create home page using html and css
+
+17)Create cart page
+    - Order summary section
+    - Empty cart section
+
+18)Move routes to routes files
+
+Note: Factory function - it's a programming pattern. It;s a simple function which gives you object.
+
+19)create dedicated controllers 
+
+20)Add to cart functionality
+    - Fetch all items from db and show on home page
+    - Create menu model and put dummy data
+        - connect to mongo db
+            yarn add mongoose
+        - use connect-mongo for session store
+            - dependecies
+                - mongoose, express-session, connect-mongo, dot env
+                yarn add express-session
+                yarn add dotenv //for storing secret keys or password or api key etc
+                yarn add express-flash
+                yarn add connect-mongo //To store session in database
+                yarn add axios //To make ajax requests when we click add to cart button
+                yarn add noty //Dependency-free notification library. for custom messages
+
+21)Create login and register pages with routes

@@ -109,6 +109,10 @@ yarn is faster then npm so .....
     so when you change the file then it will restart the server.
 
 12) Git setup and first commit
+    -to initialize git => git init
+    -to check status => git status
+    -now adding file => git add .
+    -now commit for example, => git commit -m "add to cart done" //-m for message
 
 13) install laravel Mix
     yarn add laravel-mix --save-dev

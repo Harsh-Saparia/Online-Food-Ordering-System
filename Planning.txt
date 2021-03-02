@@ -162,3 +162,10 @@ Note: Factory function - it's a programming pattern. It;s a simple function whic
                 yarn add noty //Dependency-free notification library. for custom messages
 
 21)Create login and register pages with routes
+
+22)build register crud
+    -dependecies express-flash express-session dotenv
+    -yarn add bcrypt //for hashing the password to store into database
+
+23)build login using passport
+    -yarn add passport passport-local // for auth

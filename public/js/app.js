@@ -1861,6 +1861,8 @@ function updateCart(item) {
       timeout: 1000,
       text: 'Item added to cart',
       progressBar: false,
+      theme: 'mint',
+      color: 'black',
       layout: 'bottomRight'
     }).show();
   })["catch"](function (err) {
@@ -1869,6 +1871,7 @@ function updateCart(item) {
       timeout: 1000,
       text: 'Item added to cart',
       progressBar: false,
+      theme: 'mint',
       layout: 'bottomRight'
     }).show();
   });

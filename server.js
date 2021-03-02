@@ -7,8 +7,10 @@ const PORT = process.env.PORT || 3000
 const path = require('path')
 const mongoose = require('mongoose')
 const session = require('express-session')
-const flash = require('express-flash')
+const flash = require('express-flash') //this is used to store data or message only for one request which we have sent
 const MongoDbStore = require('connect-mongo')(session)
+const passport = require('passport')
+
 
 //Database connection
 const url = 'mongodb://localhost/Foodigo';
@@ -36,15 +38,24 @@ app.use(session({
     cookie: {maxAge: 1000 * 60 * 60 * 24} //24 hours, after this much time session will be automatically deleted from database
 }))
 
+//passport config
+const passportInit = require('./app/config/passport')
+passportInit(passport)
+app.use(passport.initialize())
+app.use(passport.session())
+
+
 app.use(flash())
 
 //Assets
 app.use(express.static('public'))
+app.use(express.urlencoded({ extended: false }))
 app.use(express.json()) // because when we have json requests but server doesn't know
 
 //Global middleware
 app.use((req,res,next) => {
     res.locals.session = req.session //to access session data into response
+    res.locals.user = req.user
     next()
 })
 

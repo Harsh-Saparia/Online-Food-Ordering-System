@@ -382,3 +382,8 @@ section.cart .amount {
   border-radius: 50px !important;
   padding-left: 8px !important;
 }
+
+.noty_type__brand-success {
+  background-color: #DE636F;
+  color: #fff;
+}

@@ -12,6 +12,7 @@ function updateCart(item){
             timeout: 1000,
             text : 'Item added to cart',
             progressBar: false,
+            theme: 'mint',
             layout: 'bottomRight'
         }).show();
     }).catch(err =>{
@@ -20,6 +21,7 @@ function updateCart(item){
             timeout: 1000,
             text : 'Item added to cart',
             progressBar: false,
+            theme: 'mint',
             layout: 'bottomRight'
         }).show();
     })

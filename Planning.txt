@@ -163,9 +163,25 @@ Note: Factory function - it's a programming pattern. It;s a simple function whic
 
 21)Create login and register pages with routes
 
-22)build register crud
+22) build register crud
     -dependecies express-flash express-session dotenv
     -yarn add bcrypt //for hashing the password to store into database
 
-23)build login using passport
+23) build login using passport
     -yarn add passport passport-local // for auth
+
+24) 
+    yarn add moment //used to show date and time prietty way
+
+25) Create order controller and link it in server.js
+
+26) Create orders view with table for customers and admin
+
+27) place order functionality
+
+28) show all my orders on customers orders page
+
+29) show orders on admin orders page
+
+30) Create order single page with status
+

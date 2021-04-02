@@ -1,0 +1,62 @@
+<section class="orders light-section">
+    <div class="contailner mx-auto pt-12">
+        <h1 class="font-bold text-lg mb-4 w-10/12 px-4 py-3 mx-auto">All Orders</h1>
+        <br>
+        <% if(messages.success) { %>
+        <div id="success-alert" class="flex items-center bg-green-500 text-white text-sm font-bold w-11/12 px-4 py-3 mx-auto" role="alert">
+            <svg class=" w-7 h-7 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            <p class="font-bold text-lg"><%= messages.success %></p>
+        </div>
+        <% } %>
+        <!-- component -->
+<table class="border-collapse mx-auto my-5 bg-white w-10/12">
+    <thead>
+        <tr>
+            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Orders</th>
+            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Address</th>
+            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Phone</th>
+            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Status</th>
+            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% if(orders.length) { %>
+        <% orders.forEach( (order) => { %>
+
+        <tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Orders</span>
+                <a class="link" href="/"><%= order._id %></a>
+            </td>
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Address</span>
+                <%= order.address %>
+            </td>
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Address</span>
+                <%= order.phone %>
+            </td>
+          	<td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Status</span>
+                <span class="rounded bg-red-400 py-1 px-3 text-xs font-bold"> <%= order.status %></span>
+          	</td>
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Time</span>
+                <%= moment(order.createdAt).format('hh:mm A') %>
+            </td>
+        </tr>
+        <% }) %>
+        <% } else { %>
+            <tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                    <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Orders</span>
+                    No orders found!
+                </td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>
+    </div>
+</section>
